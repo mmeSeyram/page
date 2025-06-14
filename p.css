@@ -19,22 +19,30 @@ body {
     background: radial-gradient(circle, white, blue);
     border-radius: 50%;
     position: absolute;
-    animation: rotate 4s linear infinite;
 }
 
 #sphere1 {
     top: 50px;
     left: 0;
-    animation-delay: 0s;
+    animation: rotate1 4s linear infinite;
 }
 
 #sphere2 {
     top: 50px;
-    right: 0;
-    animation-delay: 2s;
+    left: 100px;
+    animation: rotate2 4s linear infinite;
 }
 
-@keyframes rotate {
-    0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
-    100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+@keyframes rotate1 {
+    0% { transform: rotate(0deg),
+        translateX(50px),
+        rotate(0deg); }
+    100% { transform: rotate(360deg),
+        translateX(50px) ,
+        rotate(-360deg); }
+}
+
+@keyframes rotate2 {
+    0% { transform: rotate(0deg) translateX(-50px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(-50px) rotate(-360deg); }
 }
